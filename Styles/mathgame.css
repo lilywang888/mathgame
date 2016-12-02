@@ -1,0 +1,13 @@
+.btnlogout{
+    float:right;
+    border-radius: 8px;
+}
+
+.title {
+    text-align:center;
+}
+
+.errmsg {
+    color:red;
+    text-align:center;
+}

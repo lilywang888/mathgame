@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Math Game</title>
     <link href="./Styles/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./Styles/mathgame.css" rel="stylesheet" media="screen">
 </head>
 <body>
     <div class="container">
@@ -12,7 +13,7 @@
              <div class="col-sm-10 col-sm-offset-1"><h1>Please login to play math game!</h1></div>
              <div class="col-sm-1"></div>
         </div>
-        <form action="http://1536.azurewebsites.net/authenticate.php" method="post" role="form" class="form-horizontal">
+        <form action="http://vanpro.net23.net" method="post" role="form" class="form-horizontal">
             <div class="form-group">
                 <div class="col-sm-4 text-right">Email:</div>
                 <div class="col-sm-3">
