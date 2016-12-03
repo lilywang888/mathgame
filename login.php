@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php
+        $ErrMsg = "";
         $_SESSION['$allow'] = true;
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ((empty($_POST["email"])) || (empty($_POST["password"]))){

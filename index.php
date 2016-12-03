@@ -130,5 +130,6 @@
         <div class="score"> <?php echo "Score " .$_SESSION['$countCorrect'] ."/" .$_SESSION['$count'];?> </div>
        
     </div>
+            <div></div>
 </body>
 </html>
