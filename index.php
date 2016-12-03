@@ -1,5 +1,16 @@
 <!DOCTYPE html>
-<?php session_start();?>
+<?php 
+    session_start();
+    if(isset($_SESSION['$allow'])) {
+        if ($_SESSION['$allow'] == false) {
+           echo "<script>location.href='login.php'</script>"; 
+        }
+    }
+    else {
+        echo "<script>location.href='login.php'</script>";
+    }
+    
+?>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

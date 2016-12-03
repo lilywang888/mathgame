@@ -9,11 +9,13 @@
 </head>
 <body>
     <?php
+        $_SESSION['$allow'] = true;
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ((empty($_POST["email"])) || (empty($_POST["password"]))){
                 $ErrMsg = "Invalid login credentials.";
             }
             elseif ((strcmp($_POST["email"],"a@a.a")==0) && (strcmp($_POST["password"],"aaa")==0)){
+                $_SESSION['$allow'] = true;
                 header("Location: index.php"); 
                 die();
             }
