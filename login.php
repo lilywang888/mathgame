@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php session_start(); ?>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,12 +8,26 @@
     <link href="./Styles/mathgame.css" rel="stylesheet" media="screen">
 </head>
 <body>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if ((empty($_POST["email"])) || (empty($_POST["password"]))){
+                $ErrMsg = "Invalid login credentials.";
+            }
+            elseif ((strcmp($_POST["email"],"a@a.a")==0) && (strcmp($_POST["password"],"aaa")==0)){
+                header("Location: index.php"); 
+                die();
+            }
+            else {
+                $ErrMsg = "Invalid login credentials.";
+            }
+        }
+    
+    ?>
     <div class="container">
         <div class="row">
-             <div class="col-sm-10 col-sm-offset-1"><h1>Please login to play math game!</h1></div>
-             <div class="col-sm-1"></div>
+             <div class="col-sm-12 title"><h1>Please login to play math game!</h1></div>
         </div>
-        <form action="http://vanpro.net23.net" method="post" role="form" class="form-horizontal">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" role="form" class="form-horizontal">
             <div class="form-group">
                 <div class="col-sm-4 text-right">Email:</div>
                 <div class="col-sm-3">
@@ -34,7 +48,7 @@
                 </div>
             </div>
         </form>
-        <div class="row"></div>
+        <div class="row errmsg"><?php echo $ErrMsg;?></div>
     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 .btnlogout{
     float:right;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .title {
@@ -9,5 +9,9 @@
 
 .errmsg {
     color:red;
+    text-align:center;
+}
+
+.score {
     text-align:center;
 }
